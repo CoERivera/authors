@@ -1,2 +1,2 @@
 # Authors
-A Bootcamp MERN practice project implementing CRUD functionality with form validations.
+A Bootcamp MERN practice assignment implementing CRUD functionality with form validations.
