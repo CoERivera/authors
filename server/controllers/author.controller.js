@@ -5,13 +5,16 @@ const message = (req, res) => {
 };
 
 const create = (req, res) => {
+    // Author.distinct('name', req.body).then(result => {
+    //     if (result.length === 0) {
     Author.create(req.body)
         .then((author) => res.status(201).json(author))
         .catch((err) => res.status(400).json(err));
+    //})
 };
 
 const findAll = (req, res) => {
-    Author.find()
+    Author.find().sort('name')
         .then((authors) => res.status(200).json(authors))
         .catch((err) => res.status(400).json(err));
 };
@@ -33,8 +36,8 @@ const updateOne = (req, res) => {
 const deleteOne = (req, res) => {
     const { id } = req.params;
     Author.findByIdAndDelete(id)
-    .then((author) => res.status(200).json(author))
-    .catch((err) => res.status(400).json(err));
+        .then((author) => res.status(200).json(author))
+        .catch((err) => res.status(400).json(err));
 }
 
 module.exports = { message, create, findAll, findOne, updateOne, deleteOne };

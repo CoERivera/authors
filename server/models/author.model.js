@@ -2,7 +2,10 @@ const mongoose = require("mongoose");
 
 const authorSchema = new mongoose.Schema(
     {
-        name: String,
+        name: {
+            type: String,
+            unique: true
+        }
     },
     { timestamps: true }
 );
