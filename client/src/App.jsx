@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Main />} />
         <Route path='/new' element={<Form />} />
-        <Route path='/edit/:id' element={<Form />} />
+        <Route path='/authors/:id' element={<Form />} />
       </Routes>
     </div>
   )

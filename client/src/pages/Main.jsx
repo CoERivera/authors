@@ -5,7 +5,7 @@ function Main() {
     return (
         <div>
             <LinkTo />
-            <List />            
+            <List />
         </div>
     );
 }
