@@ -52,7 +52,9 @@ function List() {
                                                 Edit
                                             </button>
                                         </Link>|
-                                        <button className='btn btn-sm btn-danger ml-2' onClick={() => handleDelete(author._id)}>
+                                        <button className='btn btn-sm btn-danger ml-2'
+                                            onClick={() => handleDelete(author._id)}
+                                        >
                                             Delete
                                         </button>
                                     </td>

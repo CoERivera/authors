@@ -26,7 +26,10 @@ function Form() {
       axios
         .put(`http://localhost:8000/api/authors/${id}`, formState)
         .then(() => navigate('/'))
-        .catch((err) => console.log(err));
+        .catch((err) =>{ 
+          console.log(err);
+          navigate('/');
+        });
     }
   };
 
